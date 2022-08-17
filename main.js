@@ -43,7 +43,7 @@ scene.add(pointLight, ambientLight)
 //const controls = new OrbitControls(camera, renderer.domElement); 
 
 //CUBE CONSTRUCT
-const faceTexture = new THREE.TextureLoader().load('face.jpg');
+const faceTexture = new THREE.TextureLoader().load('/static/img/face.jpg');
 const face = new THREE.Mesh(new THREE.BoxGeometry(6,6,6), new THREE.MeshBasicMaterial({ map: faceTexture}));
 scene.add(face); 
 face.position.z = -5;
@@ -64,7 +64,7 @@ function addStar() {
 Array(200).fill().forEach(addStar); 
 
 //ADDS SPACE BACKGROUND AS TEXTURE LOADER
-const spaceTexture = new THREE.TextureLoader().load('space.jpg'); 
+const spaceTexture = new THREE.TextureLoader().load('/static/img/space.jpg'); 
 scene.background = spaceTexture;
 
 //ADD Icosahedron FUNCTION
@@ -83,8 +83,8 @@ function addIcosahedron() {
 Array(120).fill().forEach(addIcosahedron); 
 
 //ADD MOON FUNCTION
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('/static/img/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('/static/img/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
